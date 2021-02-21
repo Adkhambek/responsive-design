@@ -1,0 +1,302 @@
+html {
+    font-size: 10px;
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: rgb(31, 69, 236);
+    padding: 2rem 0;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 3rem;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.nav-link {
+    padding: .5rem;
+    font-size: 2rem;
+}
+
+.menu-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 3rem;
+    display: none;
+}
+
+.product .container {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-photo {
+    width: 48%;
+}
+
+.product-text {
+    width: 48%;
+}
+
+.product-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.product-description {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: blue;
+} 
+
+.feature .container{
+    padding: 10rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.feature .card{
+    width: 30%;
+}
+
+.feature .card-title{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature .card-text{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature .card-link{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: blue;
+} 
+
+.gallery-box{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 30rem);
+    grid-template-areas: "photo-1 photo-2 photo-2"
+    "photo-1 photo-3 photo-4";
+    grid-gap: 1rem;
+}
+
+.gallery img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-link-1{
+    grid-area: photo-1;
+}
+
+.gallery-link-2{
+    grid-area: photo-2;
+}
+
+.gallery-link-3{
+    grid-area: photo-3;
+}
+
+.gallery-link-4{
+    grid-area: photo-4;
+} 
+
+.gallery a{
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery a:hover .photo-caption{
+    bottom: 0;
+}
+
+.photo-caption{
+    padding: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: bottom .3s ease;
+}  
+
+.footer{
+    background-color: blue;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 10rem;
+    font-size: 1.8rem;
+}
+
+.footer .container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .container div{
+    width: 30%;
+    text-align: center;
+}
+
+.footer .company{
+    text-align: left !important;
+}
+
+.company-logo{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1150px) {
+    .container {
+        width: 1040px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .container {
+        width: 940px;
+    }
+}
+
+@media (max-width: 950px) {
+    html {
+        font-size: 9px;
+    }
+
+    .container {
+        width: 840px;
+    }
+}
+
+@media (max-width: 850px) {
+    html {
+        font-size: 8px;
+    }
+
+    .container {
+        width: 740px;
+    }
+
+    .product-photo {
+        width: 100%;
+    }
+
+    .product-text {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 750px) {
+    html {
+        font-size: 7.5px;
+    }
+
+    .container {
+        width: 90%;
+    }
+    .feature .card{
+        width: 90%;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    .gallery-box{
+        width: 60%;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: "photo-1 photo-2"
+        "photo-3 photo-4";
+        
+    }
+    .footer .container div{
+        margin-bottom: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer .company{
+        text-align: center !important;
+    }
+}
+
+
+
+@media (max-width: 550px) {
+    html {
+        font-size: 7px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .product-title {
+        font-size: 3rem;
+    }
+    .gallery-box{
+        margin: 0 auto;
+        width: 100%;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat (4, 30rem);
+        grid-template-areas: "photo-1" "photo-2" "photo-3" "photo-4";
+        
+    }
+}
